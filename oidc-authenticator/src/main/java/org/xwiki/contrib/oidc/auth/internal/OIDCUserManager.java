@@ -343,7 +343,7 @@ public class OIDCUserManager
             BaseClass groupClass = context.getWiki().getGroupClass(context);
 
             // Get document representing group
-            XWikiDocument groupDoc = context.getWiki().getDocument(groupName, context);
+            XWikiDocument groupDoc = context.getWiki().getDocument("XWiki." + groupName, context);
 
             this.logger.info("Adding user [{}] to xwiki group [{}]. groupClass: [{}]; groupDoc: [{}]", xwikiUserName, groupName, groupClass, groupDoc);
 
